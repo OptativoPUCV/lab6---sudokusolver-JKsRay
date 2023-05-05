@@ -58,14 +58,18 @@ int is_valid(Node* n){
           if(marcadosFila[numFila] == 0)
             marcadosFila[numFila] = 1;
         }
-        else return 0;
+        else{
+          return 0;
+        }
 
         if(numColumna != 0)
         {
           if(marcadosColumna[numColumna] == 0)
             marcadosColumna[numColumna] = 1;
         }
-        else return 0;
+        else{
+          return 0;
+        }
       }
   }
 

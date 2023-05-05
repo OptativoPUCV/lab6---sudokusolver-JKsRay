@@ -30,3 +30,9 @@ sudoku.c:50:11: error: unused variable ‘marcadosColumna’ [-Werror=unused-var
 cc1: all warnings being treated as errors
 Compilation failed
 bdff270
+Fri 05 May 2023 07:15:52 PM UTC: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  2|4
+total_score: 15/70
+716222c

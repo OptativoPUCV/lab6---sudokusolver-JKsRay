@@ -62,8 +62,8 @@ int is_valid(Node* n){
 
         if(numColumna != 0)
         {
-          if(marcadosFila[numColumna] == 0)
-            marcadosFila[numColumna] = 1;
+          if(marcadosColumna[numColumna] == 0)
+            marcadosColumna[numColumna] = 1;
         }
         else return 0;
       }

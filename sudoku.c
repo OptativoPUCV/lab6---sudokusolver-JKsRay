@@ -46,8 +46,8 @@ void print_node(Node* n){
 int is_valid(Node* n){
   for(int k = 0 ; k < 9 ; k++)
   {
-    int * marcadosFila = calloc(10, sizeof(int));
-    int * marcadosColumna = calloc(10, sizeof(int));
+    int * marcadosFila = calloc(9, sizeof(int));
+    int * marcadosColumna = calloc(9, sizeof(int));
     for(int i = 0 ; i < 9 ; i++)
       {
         int numFila = n->sudo[k][i];

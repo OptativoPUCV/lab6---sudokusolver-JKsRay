@@ -44,7 +44,32 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
+  for(int k = 0 ; k < 9 ; k++)
+  {
+    int * marcadosFila = calloc(10, sizeof(int));
+    int * marcadosColumna = calloc(10, sizeof(int));
+    for(int i = 0 ; i < 9 ; i++)
+      {
+        int numFila = n->sudo[k][i];
+        int numColumna = n->sudo[i][k];
 
+        if(numFila != 0)
+        {
+          if(marcadosFila[numFila] == 0)
+            marcadosFila[numFila] = 1;
+        }
+        else return 0;
+
+        if(numColumna != 0)
+        {
+          if(marcadosFila[numColumna] == 0)
+            marcadosFila[numColumna] = 1;
+        }
+        else return 0;
+      }
+  }
+
+  
     return 1;
 }
 
@@ -69,9 +94,6 @@ List* get_adj_nodes(Node* n){
           }  
         }
       }
-
-      
-  
     return list;
 }
 

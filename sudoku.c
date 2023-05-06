@@ -98,6 +98,10 @@ List* get_adj_nodes(Node* n){
               {
                 pushBack(list, nuevoNodo);
               }
+              else
+              {
+                free(nuevoNodo);
+              }
             }
           }  
         }

@@ -170,7 +170,7 @@ Node* DFS(Node* initial, int* cont){
       nodoAuxList = next(listaAdyacente);
     }
     free(aux);
-    free(listAdyacente);
+    free(listaAdyacente);
   }
   
   return NULL;

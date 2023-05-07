@@ -44,15 +44,15 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-  for(int k = 0 ; k < 9 ; k++)
+  for(int i = 0 ; i < 9 ; i++)
   {
     int * marcadosFila = calloc(9, sizeof(int));
     int * marcadosColumna = calloc(9, sizeof(int));
-    //int revisarSubMatriz[9][9] = {0};
-    for(int i = 0 ; i < 9 ; i++)
+    int * marcadosSubMatriz = calloc(9, sizeof(int));
+    for(int k = 0 ; k < 9 ; k++)
       {
-        int numFila = n->sudo[k][i];
-        int numColumna = n->sudo[i][k];
+        int numFila = n->sudo[i][k];
+        int numColumna = n->sudo[k][i];
 
         if(numFila != 0)
         {
@@ -72,13 +72,13 @@ int is_valid(Node* n){
             return 0;
           }
 
-          /*int numSub = (k/3) * 3 + i/3;
-          if(revisarSubMatriz[numSub][numFila] == 0)
+          int numSub = (i/3) * 3 + k/3;
+          if(marcadosSubMatriz[numSub] == 0)
           {
-            revisarSubMatriz[numSub][numFila] = 1;
+            marcadosSubMatriz[numSub] = 1;
           }else{
             return 0;
-          }*/
+          }
         }
       }
   }

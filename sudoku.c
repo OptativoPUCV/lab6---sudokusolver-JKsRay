@@ -48,7 +48,7 @@ int is_valid(Node* n){
   {
     int * marcadosFila = calloc(9, sizeof(int));
     int * marcadosColumna = calloc(9, sizeof(int));
-    int revisarSubMatriz[9][9] = {0};
+    //int revisarSubMatriz[9][9] = {0};
     for(int i = 0 ; i < 9 ; i++)
       {
         int numFila = n->sudo[k][i];
@@ -72,13 +72,13 @@ int is_valid(Node* n){
             return 0;
           }
 
-          int numSub = (k/3) * 3 + i/3;
+          /*int numSub = (k/3) * 3 + i/3;
           if(revisarSubMatriz[numSub][numFila] == 0)
           {
             revisarSubMatriz[numSub][numFila] = 1;
           }else{
             return 0;
-          }
+          }*/
         }
       }
   }

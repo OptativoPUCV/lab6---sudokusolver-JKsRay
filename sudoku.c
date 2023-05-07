@@ -98,12 +98,11 @@ List* get_adj_nodes(Node* n){
                 pushBack(list,nuevoNodo);
               }
             }
-            
-            if(primerCeroEncontrado == 1)
+          }
+          if(primerCeroEncontrado == 1)
             {
               return list;
             }
-          }  
         }
       }
     return list;

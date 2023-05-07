@@ -87,7 +87,7 @@ int is_valid(Node* n){
           {
             if(marcadosSubMatriz[numSubMatriz] == 0)
             {
-              marcadosSubMatriz[numSubMatriz] = 1
+              marcadosSubMatriz[numSubMatriz] = 1;
             }
             else
             {

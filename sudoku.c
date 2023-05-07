@@ -79,12 +79,15 @@ int is_valid(Node* n){
 
 List* get_adj_nodes(Node* n){
     List* list=createList();
+
+    bool primerCeroEncontrado = false;
      for(int i = 0 ; i < 9 ; i++)
       {
         for(int k = 0 ; k < 9 ; k++)
         {
           if(n->sudo[i][k] == 0)
           {
+            primerCeroEncontrado = true;
             for(int j = 0 ; j < 9 ; j++)
             {
               Node * nuevoNodo = copy(n);
@@ -94,6 +97,10 @@ List* get_adj_nodes(Node* n){
               {
                 pushBack(list,nuevoNodo);
               }
+            }
+            if(primerCeroEncontrado == true)
+            {
+              return list;
             }
           }  
         }

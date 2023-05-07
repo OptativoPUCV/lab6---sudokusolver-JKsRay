@@ -159,3 +159,26 @@ Sun 07 May 2023 12:17:26 AM UTC:
  tests:  5|3
 total_score: 35/70
 1ed55f6
+Sun 07 May 2023 12:21:27 AM UTC: 
+ sudoku.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:83:5: error: unknown type name ‘bool’
+   83 |     bool primerCeroEncontrado = false;
+      |     ^~~~
+sudoku.c:4:1: note: ‘bool’ is defined in header ‘<stdbool.h>’; did you forget to ‘#include <stdbool.h>’?
+    3 | #include "list.h"
+  +++ |+#include <stdbool.h>
+    4 | 
+sudoku.c:83:33: error: ‘false’ undeclared (first use in this function)
+   83 |     bool primerCeroEncontrado = false;
+      |                                 ^~~~~
+sudoku.c:83:33: note: ‘false’ is defined in header ‘<stdbool.h>’; did you forget to ‘#include <stdbool.h>’?
+sudoku.c:83:33: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:90:36: error: ‘true’ undeclared (first use in this function)
+   90 |             primerCeroEncontrado = true;
+      |                                    ^~~~
+sudoku.c:90:36: note: ‘true’ is defined in header ‘<stdbool.h>’; did you forget to ‘#include <stdbool.h>’?
+Compilation failed
+5d204ec

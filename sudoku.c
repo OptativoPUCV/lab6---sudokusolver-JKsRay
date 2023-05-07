@@ -101,7 +101,7 @@ List* get_adj_nodes(Node* n){
             
             if(primerCeroEncontrado == 1)
             {
-              break;
+              return list;
             }
           }  
         }

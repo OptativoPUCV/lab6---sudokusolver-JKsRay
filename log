@@ -254,3 +254,20 @@ Sun 07 May 2023 01:21:58 AM UTC:
  tests:  0|5
 total_score: 0/70
 cfb33d8
+Sun 07 May 2023 02:39:55 AM UTC: 
+ sudoku.c | 17 ++++++++++++++---
+ 1 file changed, 14 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+sudoku.c:96:5: error: expected identifier or ‘(’ before ‘return’
+   96 |     return 1;
+      |     ^~~~~~
+sudoku.c:97:1: error: expected identifier or ‘(’ before ‘}’ token
+   97 | }
+      | ^
+sudoku.c: In function ‘is_valid’:
+sudoku.c:95:3: error: control reaches end of non-void function [-Werror=return-type]
+   95 |   }
+      |   ^
+cc1: all warnings being treated as errors
+Compilation failed
+f7de9f0

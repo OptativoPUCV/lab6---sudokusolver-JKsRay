@@ -53,7 +53,11 @@ int is_valid(Node* n){
       {
         int numFila = n->sudo[i][k];
         int numColumna = n->sudo[k][i];
-
+        
+        int filaSubMatriz = 3 * (i/3) + (k/3);
+        int columnaSubMatriz = 3 * (i%3) + (k%3);
+        int numSubMatriz = n->sudo[filaSubMatriz][columnaSubMatriz];
+        
         if(numFila != 0)
         {
           if(marcadosFila[numFila] == 0) {
@@ -71,15 +75,22 @@ int is_valid(Node* n){
           }else{
             return 0;
           }
+        }
 
-          int numSub = (i/3) * 3 + k/3;
-          if(marcadosSubMatriz[numSub] == 0)
+        if(numSubMatriz != 0)
+        {
+          if(marcadosSubMatriz[numSubMatriz] == 0)
           {
-            marcadosSubMatriz[numSub] = 1;
+            marcadosSubMatriz[numSubMatriz] = 1;
           }else{
             return 0;
           }
         }
+          
+        }
+
+        
+        
       }
   }
     return 1;

@@ -333,3 +333,15 @@ sudoku.c:165:32: error: ‘listAdyacente’ undeclared (first use in this functi
 sudoku.c:165:32: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 bbba10a
+Sun 07 May 2023 03:49:47 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:173:10: error: ‘listAdyacente’ undeclared (first use in this function); did you mean ‘listaAdyacente’?
+  173 |     free(listAdyacente);
+      |          ^~~~~~~~~~~~~
+      |          listaAdyacente
+sudoku.c:173:10: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+07285df

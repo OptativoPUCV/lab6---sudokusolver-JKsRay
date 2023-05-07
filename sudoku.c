@@ -162,7 +162,7 @@ Node* DFS(Node* initial, int* cont){
       return aux;
     }
     List * listaAdyacente = get_adj_nodes(aux);
-    Node * nodoAuxList = first(listAdyacente);
+    Node * nodoAuxList = first(listaAdyacente);
 
     while(nodoAuxList != NULL)
     {

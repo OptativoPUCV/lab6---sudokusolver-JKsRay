@@ -73,30 +73,26 @@ int is_valid(Node* n){
         }
       }
   }
-
-  
     return 1;
 }
 
 
 List* get_adj_nodes(Node* n){
     List* list=createList();
-     for(int k = 0 ; k < 9 ; k++)
+     for(int i = 0 ; i < 9 ; i++)
       {
-        for(int i = 0 ; i < 9 ; i++)
+        for(int k = 0 ; k < 9 ; k++)
         {
-          if(n->sudo[k][i] == 0)
+          if(n->sudo[i][k] == 0)
           {
             for(int j = 0 ; j < 9 ; j++)
             {
               Node * nuevoNodo = copy(n);
-              nuevoNodo->sudo[k][i] = j + 1;
+              nuevoNodo->sudo[i][k] = j + 1;
               
               if(is_valid(nuevoNodo))
               {
                 pushBack(list,nuevoNodo);
-              }else{
-                free(nuevoNodo);
               }
             }
           }  

@@ -182,3 +182,9 @@ sudoku.c:90:36: error: ‘true’ undeclared (first use in this function)
 sudoku.c:90:36: note: ‘true’ is defined in header ‘<stdbool.h>’; did you forget to ‘#include <stdbool.h>’?
 Compilation failed
 5d204ec
+Sun 07 May 2023 12:21:46 AM UTC: 
+ sudoku.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+ tests:  5|3
+total_score: 35/70
+7398b9d

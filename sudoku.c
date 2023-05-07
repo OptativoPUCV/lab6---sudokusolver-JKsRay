@@ -149,6 +149,21 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
+  Stack* pila = createStack();
+  push(pila, initial);
+
+  while(pila->top != NULL)
+  {
+    Node * aux = pila->top;
+    pop(pila);
+
+    if(is_final(aux))
+    {
+      return aux;
+    }
+  }
+  
+  
   return NULL;
 }
 

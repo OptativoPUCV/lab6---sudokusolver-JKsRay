@@ -82,13 +82,21 @@ int is_valid(Node* n){
           if(marcadosSubMatriz[numSubMatriz] == 0)
           {
             marcadosSubMatriz[numSubMatriz] = 1;
-          }else{
-            return 0;
           }
-        }
+          else
+          {
+            if(marcadosSubMatriz[numSubMatriz] == 0)
+            {
+              marcadosSubMatriz[numSubMatriz] = 1
+            }
+            else
+            {
+              return 0;
+            }
+          }
           
         }
-
+          
         
         
       }

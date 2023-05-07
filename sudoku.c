@@ -161,8 +161,17 @@ Node* DFS(Node* initial, int* cont){
     {
       return aux;
     }
+    List * listaAdyacente = get_adj_nodes(aux);
+    Node * nodoAuxList = first(listAdyacente);
+
+    while(nodoAuxList != NULL)
+    {
+      push(pila, nodoAuxList);
+      nodoAuxList = next(listaAdyacente);
+    }
+    free(aux);
+    free(listAdyacente);
   }
-  
   
   return NULL;
 }
